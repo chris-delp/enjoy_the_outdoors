@@ -20,7 +20,27 @@ window.onload = function(){
 
 }
 
+function populateParkSelect() {
+    let dropdownSelect = (document.getElementById('location').checked == true);
+    let parkDDL = document.getElementById('parkSel');
+    
+    console.log(dropdownSelect);
 
+    if (document.getElementById('location').checked == true) {
+        for(let i=0; i<locationsArray.length; i++){
+         parkDDL.innerHTML = parkDDL.innerHTML + '<option>' + locationsArray[i] + '</option>';
+        }
+    }    
+    
+    else {
+            for(let i=0; i<parkTypesArray.length; i++){
+                 parkDDL.innerHTML = parkDDL.innerHTML + '<option>' + parkTypesArray[i] + '</option>';
+         
+               }
+               console.log(parkDDL);
+        }
+        
+}
 
 let loadJsonData = async (path) => {
     let response = await fetch(path)
