@@ -18,7 +18,7 @@ function populateSelect() {
             mountainDropdownList.innerHTML = mountainDropdownList.innerHTML + '<option>' + mountainsArray[i]['name'] + '</option>';
     }
 } 
-//function show(mountainDropdownList){}
+
 //function that can "fetch" the sunset/sunrise times
 let loadJsonData = async (path) => {
     let response = await fetch(path)
