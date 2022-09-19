@@ -20,6 +20,8 @@ window.onload = function(){
 
 }
 
+
+
 let loadJsonData = async (path) => {
     let response = await fetch(path)
     let data = await response.json()
