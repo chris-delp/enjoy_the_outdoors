@@ -38,10 +38,10 @@
       </nav>
     <h1>National Parks</h1>
     
-    <div class="container">
-        <input type="radio" id="location" name="searchby" value="loc" onchange="populateParkSelect()">
+    <div class="container" onchange="populateParkSelect()">
+        <input type="radio" id="location" name="searchby" value="loc">
         <label for="location">By Location (State)</label>
-        <input type="radio" id="parktype" name="searchby" value="park" onchange="populateParkSelect()">
+        <input type="radio" id="parktype" name="searchby" value="park">
         <label for="parktype">By Park Type</label>
         <select id="parkSel">
             <option value="">-- Select --</option>

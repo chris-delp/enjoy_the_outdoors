@@ -21,23 +21,24 @@ window.onload = function(){
 }
 
 function populateParkSelect() {
+    
     let dropdownSelect = (document.getElementById('location').checked == true);
     let parkDDL = document.getElementById('parkSel');
-    
-    console.log(dropdownSelect);
-
+      
     if (document.getElementById('location').checked == true) {
+        parkDDL.innerHTML = "-- Select --";
         for(let i=0; i<locationsArray.length; i++){
          parkDDL.innerHTML = parkDDL.innerHTML + '<option>' + locationsArray[i] + '</option>';
         }
     }    
     
     else {
+        parkDDL.innerHTML = "-- Select --";
             for(let i=0; i<parkTypesArray.length; i++){
                  parkDDL.innerHTML = parkDDL.innerHTML + '<option>' + parkTypesArray[i] + '</option>';
          
                }
-               console.log(parkDDL);
+              
         }
         
 }

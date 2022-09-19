@@ -11,8 +11,7 @@ window.onload = function(){
 
 }
 function populateSelect() {
-    //let mtnList = ['Mt Washington','Mt Mansfield'];
-    
+          
     let mountainDropdownList = document.getElementById('sel');
         for(let i=0; i<mountainsArray.length; i++){
             mountainDropdownList.innerHTML = mountainDropdownList.innerHTML + '<option>' + mountainsArray[i]['name'] + '</option>';
