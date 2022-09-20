@@ -38,14 +38,16 @@ function populateParkSelect() {
         }
     }    
     
-    else {
+    else if(document.getElementById('parktype').checked == true){
         parkDDL.innerHTML = "<option>-- Select --</option>";
             for(let i=0; i<parkTypesArray.length; i++){
                  parkDDL.innerHTML = parkDDL.innerHTML + '<option>' + parkTypesArray[i] + '</option>';
          
             }
-              
         }
+    else if(document.getElementById('displayAll').checked == true){
+        displayAllParksData();
+    }
         //clearParksTable();
 }
 
@@ -118,7 +120,11 @@ function clearParksTable(){
         var rowCount = parkTable.rows.length;
         for (var i = rowCount-1; i >= 0; i--) {
             parkTable.deleteRow(i);
+        }
 }
+
+function displayAllParksData(){
+    
 }
 
 let loadJsonData = async (path) => {
