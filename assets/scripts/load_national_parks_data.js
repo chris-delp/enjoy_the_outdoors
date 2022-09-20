@@ -26,14 +26,14 @@ function populateParkSelect() {
     let parkDDL = document.getElementById('parkSel');
       
     if (document.getElementById('location').checked == true) {
-        parkDDL.innerHTML = "-- Select --";
+        parkDDL.innerHTML = "<option>-- Select --</option>";
         for(let i=0; i<locationsArray.length; i++){
          parkDDL.innerHTML = parkDDL.innerHTML + '<option>' + locationsArray[i] + '</option>';
         }
     }    
     
     else {
-        parkDDL.innerHTML = "-- Select --";
+        parkDDL.innerHTML = "<option>-- Select --</option>";
             for(let i=0; i<parkTypesArray.length; i++){
                  parkDDL.innerHTML = parkDDL.innerHTML + '<option>' + parkTypesArray[i] + '</option>';
          
