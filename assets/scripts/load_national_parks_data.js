@@ -43,6 +43,17 @@ function populateParkSelect() {
         
 }
 
+function populateParksTable() {
+    let dropdownRef = document.getElementById('parkSel');
+   //let dropdownValue = dropdownRef.value;
+    //let dropdownText = dropdownRef.options[dropdownValue.selectedIndex].text;
+    let parkTable = document.getElementById('parkData');
+
+    console.log(dropdownRef.value);
+
+
+}
+
 let loadJsonData = async (path) => {
     let response = await fetch(path)
     let data = await response.json()
