@@ -2,6 +2,13 @@ body {
     background-color: lightblue;
 }
 
+.container {
+
+margin-top: 1em;
+margin-bottom: 1em;
+
+}
+
 .center {
     text-align: center;
     display: block;
