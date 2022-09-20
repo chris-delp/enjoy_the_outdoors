@@ -3,6 +3,12 @@
 let locationsArray = []
 let nationalParksArray = []
 let parkTypesArray = []
+let tableCounter = 0;
+
+let dropdownRef = document.getElementById('parkSel');
+let dropdownValue = dropdownRef.value;
+   
+let parkTable = document.getElementById('parkData');
 
 window.onload = function(){
 
@@ -37,18 +43,20 @@ function populateParkSelect() {
             for(let i=0; i<parkTypesArray.length; i++){
                  parkDDL.innerHTML = parkDDL.innerHTML + '<option>' + parkTypesArray[i] + '</option>';
          
-               }
+            }
               
         }
-        
+        //clearParksTable();
 }
 
 function populateParksTable() {
-    
+    clearParksTable();
     let dropdownRef = document.getElementById('parkSel');
+    
     let dropdownValue = dropdownRef.value;
-   
     let parkTable = document.getElementById('parkData');
+    console.log(parkTable);
+    let dropdownSelect = (document.getElementById('location').checked == true);
     var header = parkTable.createTHead();
     var row = header.insertRow(0);
     var headerCell1 = row.insertCell(0);
@@ -61,29 +69,56 @@ function populateParksTable() {
     headerCell3.innerHTML = "<b>City</b>";
     headerCell4.innerHTML = "<b>State</b>";
     headerCell5.innerHTML = "<b>Location ID</b>"
-
-    for(let i=0; i<nationalParksArray.length; i++){
-        if(dropdownValue === nationalParksArray[i]['State']){
-            console.log(nationalParksArray[i]['LocationID']);
-            var row1 = parkTable.insertRow(-1);
-            var cell1 = row1.insertCell(0);
-            var cell2 = row1.insertCell(1);
-            var cell3 = row1.insertCell(2);
-            var cell4 = row1.insertCell(3);
-            var cell5 = row1.insertCell(4);
-            //cell1.innerHTML = '<th>' + 'Location Name' + '</th>';
-            
-            cell1.innerHTML = nationalParksArray[i]['LocationName'];
-            cell2.innerHTML = nationalParksArray[i]['Address'];
-            cell3.innerHTML = nationalParksArray[i]['City'];
-            cell4.innerHTML = nationalParksArray[i]['State'];
-            cell5.innerHTML = nationalParksArray[i]['LocationID'];
-        }
-        
-    }
-    //console.log(dropdownValue);
+    tableCounter++;
     
+    if(dropdownSelect){
+        for(let i=0; i<nationalParksArray.length; i++){
+            if(dropdownValue === nationalParksArray[i]['State']){
+                //console.log(nationalParksArray[i]['LocationID']);
+                var row1 = parkTable.insertRow(-1);
+                var cell1 = row1.insertCell(0);
+                var cell2 = row1.insertCell(1);
+                var cell3 = row1.insertCell(2);
+                var cell4 = row1.insertCell(3);
+                var cell5 = row1.insertCell(4);
+                        
+                cell1.innerHTML = nationalParksArray[i]['LocationName'];
+                cell2.innerHTML = nationalParksArray[i]['Address'];
+                cell3.innerHTML = nationalParksArray[i]['City'];
+                cell4.innerHTML = nationalParksArray[i]['State'];
+                cell5.innerHTML = nationalParksArray[i]['LocationID'];
+            }
+        
+        }
+    }
+    else {
+        for(let i=0; i<nationalParksArray.length; i++){
+            if(nationalParksArray[i]['LocationName'].includes(dropdownValue)){
+                //console.log(nationalParksArray[i]['LocationID']);
+                var row1 = parkTable.insertRow(-1);
+                var cell1 = row1.insertCell(0);
+                var cell2 = row1.insertCell(1);
+                var cell3 = row1.insertCell(2);
+                var cell4 = row1.insertCell(3);
+                var cell5 = row1.insertCell(4);
+                        
+                cell1.innerHTML = nationalParksArray[i]['LocationName'];
+                cell2.innerHTML = nationalParksArray[i]['Address'];
+                cell3.innerHTML = nationalParksArray[i]['City'];
+                cell4.innerHTML = nationalParksArray[i]['State'];
+                cell5.innerHTML = nationalParksArray[i]['LocationID'];
+            }
+        } 
 
+    }
+}
+
+function clearParksTable(){
+    let parkTable = document.getElementById('parkData');
+        var rowCount = parkTable.rows.length;
+        for (var i = rowCount-1; i >= 0; i--) {
+            parkTable.deleteRow(i);
+}
 }
 
 let loadJsonData = async (path) => {

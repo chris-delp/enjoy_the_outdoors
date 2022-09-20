@@ -45,24 +45,17 @@
         <label for="location">By Location (State)</label>
         <input type="radio" id="parktype" name="searchby" value="park" onchange="populateParkSelect()">
         <label for="parktype">By Park Type</label>
+       <!--<input type="button" id="btnDelete" value="Delete Rows" onclick="clearParksTable()" /> --> 
     </div>
     <div class="container">
-        <select id="parkSel"  oninput="populateParksTable()">
+        <select id="parkSel" onchange="populateParksTable()">
             <option value="">-- Select --</option>
         </select>
     </div>
     
     <div class="container mt-4 table-responsive-sm" id="tableContainer">
         <table id="parkData" class="table table-hover">
-            <!--
-              <tr>
-                <th>Location Name</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Location ID</th>
-            </tr>
-          -->
+            
         </table>
 
     </div>
