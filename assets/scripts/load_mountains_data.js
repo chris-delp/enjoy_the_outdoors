@@ -32,13 +32,7 @@ mountainNames.addEventListener("change",(event)=> {
     console.log(selectedMtn);
 })
 
-function getMountain(){
-    let dropdownRef = document.getElementById('mtnSel');
-    
-    let dropdownValue = dropdownRef.value;
-    
-    console.log(dropdownValue);
-}
+
 
 //function that can "fetch" the sunset/sunrise times
 let loadJsonData = async (path) => {
