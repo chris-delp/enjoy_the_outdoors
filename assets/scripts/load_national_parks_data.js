@@ -70,8 +70,8 @@ function populateParksTable() {
     headerCell2.innerHTML = "<b>Address</b>";
     headerCell3.innerHTML = "<b>City</b>";
     headerCell4.innerHTML = "<b>State</b>";
-    headerCell5.innerHTML = "<b>Location ID</b>"
-    tableCounter++;
+    headerCell5.innerHTML = "<b>Location ID</b>";
+    //tableCounter++;
     
     if(dropdownSelect){
         for(let i=0; i<nationalParksArray.length; i++){
