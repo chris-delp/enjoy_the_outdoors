@@ -57,7 +57,7 @@ function populateParksTable() {
     
     let dropdownValue = dropdownRef.value;
     let parkTable = document.getElementById('parkData');
-    console.log(parkTable);
+    //console.log(parkTable);
     let dropdownSelect = (document.getElementById('location').checked == true);
     var header = parkTable.createTHead();
     var row = header.insertRow(0);

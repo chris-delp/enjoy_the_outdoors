@@ -39,15 +39,23 @@
     <div class="container">
       <h1>National Parks</h1>
     </div>
-
-    <div class="container" >
-        <input type="radio" id="location" name="searchby" value="loc" onchange="populateParkSelect()">
-        <label for="location">By Location (State)</label>
-        <input type="radio" id="parktype" name="searchby" value="park" onchange="populateParkSelect()">
-        <label for="parktype">By Park Type</label>
-        <input type="button" id="displayall" name="display" value="Show Me All Parks" onclick="displayAllParksData()">
-        
-       <!--<input type="button" id="btnDelete" value="Delete Rows" onclick="clearParksTable()" /> --> 
+    <div class="container">
+      Are you looking for a new National Park to explore?  Use the radio buttons to select how you'd like to search, 
+      by state or type of park, then use the dropdown to populate the table with your results.  
+      <br>
+      <br>
+      If you'd like to see all of our glorious parks, try the Show Me All Parks button!
+      <br>
+      
+      <div class="container" >
+          <input type="radio" id="location" name="searchby" value="loc" onchange="populateParkSelect()">
+          <label for="location">By Location (State)</label>
+          <input type="radio" id="parktype" name="searchby" value="park" onchange="populateParkSelect()">
+          <label for="parktype">By Park Type</label>
+          <input type="button" id="displayall" name="display" value="Show Me All Parks" onclick="displayAllParksData()">
+          
+        <!--<input type="button" id="btnDelete" value="Delete Rows" onclick="clearParksTable()" /> --> 
+     </div>
     </div>
     <div class="container">
         <select id="parkSel" onchange="populateParksTable()">

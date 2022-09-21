@@ -14,7 +14,6 @@ window.onload = function(){
 
 }
 function populateSelect() {
-         
     let mountainDropdownList = document.getElementById('mtnSel');
     if(clickCounter === 0) {
         for(let i=0; i<mountainsArray.length; i++){
@@ -23,8 +22,6 @@ function populateSelect() {
     }
     clickCounter++;
     console.log(clickCounter);
-    
-    
 }
 
 mountainNames.addEventListener("change",(event)=> {
