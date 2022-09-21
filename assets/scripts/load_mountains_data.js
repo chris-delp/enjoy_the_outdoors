@@ -21,14 +21,41 @@ function populateSelect() {
         }
     }
     clickCounter++;
-    console.log(clickCounter);
+    //console.log(clickCounter);
 }
 
 mountainNames.addEventListener("change",(event)=> {
     selectedMtn = document.getElementById('mtnSel').value;
-    console.log(selectedMtn);
+    // console.log(selectedMtn);
+    let selectedMtnData = loadMountain(selectedMtn);
+    let mountain = document.getElementById('mountainCard');
+   
+    //var mtnName = mountain;
+    //var mtnHt = mountain;
+    let imgLink = "assets/images/mountains/";
+    //for(let i=0;i<mountainsArray.length; i++){
+    //    let imgSearch =    
+    //}
+         
+    mountain.innerHTML = "<img src= <q>" + imgLink + "</q>" +
+    "<p>" + "Name: " + selectedMtnData['name'] + "<br>" 
+    + "Elevation: " +  selectedMtnData['elevation'] + " feet" + "<br>" 
+    + "Effort Level: " + selectedMtnData['effort'] + "<br>" 
+    + "Description: " + selectedMtnData['desc'] + "</p>";
+    //mtnHt.innerHTML = "<p>" + selectedMtnData['elevation'] + "</p>";
+    //console.log(mountain, mtnName);
 })
 
+function loadMountain(selectedMtn){
+    for(let i=0; i<mountainsArray.length; i++){
+        if(mountainsArray[i]['name'].match(selectedMtn)) {
+        return mountainsArray[i];
+        //console.log(mountainsArray[i]);
+        }
+    }
+    //console.log(mountainsArray[i])
+    return -1;
+}
 
 
 //function that can "fetch" the sunset/sunrise times
