@@ -126,6 +126,9 @@ function clearParksTable() {
 function displayAllParksData() {
 
     clearParksTable();
+    //attempting to add table improvements with bootstrap through innerhtml
+    //let tableCreate = document.getElementById('tableContainer');
+    //tableCreate.innerHTML = `<table id="parkData" class="table table-hover">`;
 
     var header = parkTable.createTHead();
     var row = header.insertRow(0);
@@ -157,6 +160,7 @@ function displayAllParksData() {
         cell5.innerHTML = nationalParksArray[i]['LocationID'];
 
     }
+    //tableCreate.innerHTML = tableCreate.innerHTML + `</table>`;
     let radioSel1 = document.getElementById('location');
     radioSel1.checked = false;
     let radioSel2 = document.getElementById('parktype');
