@@ -35,3 +35,7 @@ body {
     text-align: justify;
     padding: 1em;
 }
+
+#homeHeader {
+    padding-top: 1em;
+}
