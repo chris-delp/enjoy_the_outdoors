@@ -28,18 +28,19 @@ mountainNames.addEventListener("change",(event)=> {
     selectedMtn = document.getElementById('mtnSel').value;
     // console.log(selectedMtn);
     let selectedMtnData = loadMountain(selectedMtn);
-    let mountain = document.getElementById('mountainCard');
+    let mountain = document.getElementById('mountainCards');
    
     //var mtnName = mountain;
     //var mtnHt = mountain;
-    let imgLink = "assets/images/mountains/";
+    //let imgLink = "assets/images/mountains/";
     //for(let i=0;i<mountainsArray.length; i++){
     //    let imgSearch =    
     //}
     //assets\images\mountains\Adams-StoryImage_2.jpg
-    mountain.innerHTML = `<img src="assets/images/mountains/${selectedMtnData['img']}" style="border-radius:10px"<br>
+    mountain.innerHTML = `<article class="card" id="mountainCard">              
+    <img src="assets/images/mountains/${selectedMtnData['img']}" style="border-radius:10px"<br>
     <p><b>Name: </b> ${selectedMtnData['name']}<br><b>Elevation: </b> ${selectedMtnData['elevation']} feet<br>
-    <b>Effort Level: </b>${selectedMtnData['effort']}<br><b>Description: </b><br>${selectedMtnData['desc']}</p>`;
+    <b>Effort Level: </b>${selectedMtnData['effort']}<br><b>Description: </b><br>${selectedMtnData['desc']}</p></article>`;
     //mtnHt.innerHTML = "<p>" + selectedMtnData['elevation'] + "</p>";
     //console.log(mountain, mtnName);
 })
