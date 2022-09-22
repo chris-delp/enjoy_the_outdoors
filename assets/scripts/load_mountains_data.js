@@ -36,12 +36,10 @@ mountainNames.addEventListener("change",(event)=> {
     //for(let i=0;i<mountainsArray.length; i++){
     //    let imgSearch =    
     //}
-         
-    mountain.innerHTML = "<img src= <q>" + imgLink + "</q>" +
-    "<p>" + "Name: " + selectedMtnData['name'] + "<br>" 
-    + "Elevation: " +  selectedMtnData['elevation'] + " feet" + "<br>" 
-    + "Effort Level: " + selectedMtnData['effort'] + "<br>" 
-    + "Description: " + selectedMtnData['desc'] + "</p>";
+    //assets\images\mountains\Adams-StoryImage_2.jpg
+    mountain.innerHTML = `<img src="assets/images/mountains/${selectedMtnData['img']}" style="object-fit:contain"<br>
+    <p>Name: ${selectedMtnData['name']}<br>Elevation: ${selectedMtnData['elevation']} feet<br>
+    Effort Level: ${selectedMtnData['effort']}<br>Description: ${selectedMtnData['desc']}</p>`;
     //mtnHt.innerHTML = "<p>" + selectedMtnData['elevation'] + "</p>";
     //console.log(mountain, mtnName);
 })
