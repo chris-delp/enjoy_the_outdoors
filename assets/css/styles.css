@@ -20,4 +20,9 @@ margin-bottom: 1em;
     justify-content: space-between;
     max-width: 20em;
     
+    
+}
+.card{
+    border-radius: 25px;
+    background-color: #73ad21;
 }
