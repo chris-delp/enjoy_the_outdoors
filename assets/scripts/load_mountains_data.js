@@ -37,9 +37,9 @@ mountainNames.addEventListener("change",(event)=> {
     //    let imgSearch =    
     //}
     //assets\images\mountains\Adams-StoryImage_2.jpg
-    mountain.innerHTML = `<img src="assets/images/mountains/${selectedMtnData['img']}" style="border-radius:25px"<br>
-    <p>Name: ${selectedMtnData['name']}<br>Elevation: ${selectedMtnData['elevation']} feet<br>
-    Effort Level: ${selectedMtnData['effort']}<br>Description: ${selectedMtnData['desc']}</p>`;
+    mountain.innerHTML = `<img src="assets/images/mountains/${selectedMtnData['img']}" style="border-radius:10px"<br>
+    <p><b>Name: </b> ${selectedMtnData['name']}<br><b>Elevation: </b> ${selectedMtnData['elevation']} feet<br>
+    <b>Effort Level: </b>${selectedMtnData['effort']}<br><b>Description: </b><br>${selectedMtnData['desc']}</p>`;
     //mtnHt.innerHTML = "<p>" + selectedMtnData['elevation'] + "</p>";
     //console.log(mountain, mtnName);
 })

@@ -17,12 +17,14 @@ margin-bottom: 1em;
 
 .cards {
     display: flex;
-    justify-content: space-between;
-    max-width: 20em;
     
+    max-width: 20em;
+    border-radius: 10px;
     
 }
 .card{
-    border-radius: 25px;
-    background-color: #73ad21;
+    border-radius: 10px;
+    background-color: #034077;
+    color: aliceblue;
+    text-align: justify;
 }
