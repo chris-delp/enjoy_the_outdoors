@@ -26,7 +26,7 @@ function populateSelect() {
 
 mountainNames.addEventListener("change",(event)=> {
     selectedMtn = document.getElementById('mtnSel').value;
-    //console.log(selectedMtn);
+    console.log(selectedMtn);
     let selectedMtnData = loadMountain(selectedMtn);
     let mountain = document.getElementById('mountainCards');
     //var mtnName = mountain;
@@ -36,7 +36,7 @@ mountainNames.addEventListener("change",(event)=> {
     //    let imgSearch =    
     //}
     //assets\images\mountains\Adams-StoryImage_2.jpg
-    if(selectedMtn !="-- Select --"){
+    if(selectedMtn !=""){
     mountain.innerHTML = `<article class="card" id="mountainCard">              
     <img src="assets/images/mountains/${selectedMtnData['img']}" style="border-radius:10px; margin-bottom:1em"<br>
     <p><b>Name: </b> ${selectedMtnData['name']}<br><b>Elevation: </b> ${selectedMtnData['elevation']} feet<br>
