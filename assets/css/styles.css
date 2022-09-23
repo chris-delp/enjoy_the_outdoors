@@ -1,6 +1,7 @@
 body {
     background-color: #E6E6E6;
     font-family: 'Roboto';
+    color: #343741;
 }
 
 .navbar {
@@ -23,6 +24,7 @@ body {
 .btn{
     background-color: #99E5EA;
     color: #1A1446;
+    
 }
 .cards {
     display: flex;
@@ -50,4 +52,16 @@ body {
 hr.solid {
     border-color: #C0BFC0;
     border: 1px;
+}
+
+.gg-cloud {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 8px;
+    height: 2px;
+    background: currentColor;
+    margin-bottom: -20px;
+    color:#343741;
 }
