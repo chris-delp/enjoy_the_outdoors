@@ -1,7 +1,11 @@
 body {
-    background-color: lightblue;
+    background-color: #E6E6E6;
+    font-family: 'Roboto';
 }
 
+.navbar {
+    background-color: #FFD000;
+}
 .container {
 
     margin-top: 1em;
