@@ -56,8 +56,7 @@ hr.solid {
 
 .gg-cloud {
     box-sizing: border-box;
-    position: relative;
-    display: block;
+    
     transform: scale(var(--ggs,1));
     width: 8px;
     height: 2px;
