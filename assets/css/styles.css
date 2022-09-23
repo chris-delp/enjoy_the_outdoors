@@ -64,3 +64,11 @@ hr.solid {
     margin-bottom: -20px;
     color:#343741;
 }
+.table {
+    border-collapse: collapse;
+    border-color: #343741;
+}
+
+tr:hover {
+    background-color: #C0BFC0;
+}
