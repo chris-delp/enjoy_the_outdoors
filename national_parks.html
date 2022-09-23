@@ -52,7 +52,9 @@
     </figure>
     
     
+
     <div class="container">
+      <hr class ="solid">
       Are you looking for a new National Park to explore?  Use the radio buttons to select how you'd like to search, 
       by state or type of park, then use the dropdown to populate the table with your results.  
       <br>
@@ -60,6 +62,8 @@
       If you'd like to see all of our glorious parks, try the Show Me All Parks button!
       <br>
       
+      <hr class ="solid">
+
       <div class="container" >
           <input type="radio" id="location" name="searchby" value="loc" onchange="populateParkSelect()">
           <label for="location">By Location (State)</label>
@@ -74,6 +78,7 @@
         <select id="parkSel" onchange="populateParksTable()">
             <option value="">-- Select --</option>
         </select>
+        <hr class ="solid">
     </div>
     
     <div class="container mt-3 table-responsive-sm" id="tableContainer">

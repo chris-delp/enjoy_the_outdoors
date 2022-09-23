@@ -20,7 +20,10 @@ body {
     
     margin-bottom: 1em;
 }
-
+.btn{
+    background-color: #99E5EA;
+    color: #1A1446;
+}
 .cards {
     display: flex;
     max-width: 30em;
@@ -42,4 +45,9 @@ body {
 
 #homeHeader {
     padding-top: 1em;
+}
+
+hr.solid {
+    border-color: #C0BFC0;
+    border: 1px;
 }
