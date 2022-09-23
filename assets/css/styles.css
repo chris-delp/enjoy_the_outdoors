@@ -37,10 +37,10 @@ body {
 .card {
     border-style: solid;
     border-width: thick;
-    border-color: black;
+    border-color: #1A1446;
     border-radius: 5px;
-    background-color: #034077;
-    color: aliceblue;
+    background-color: #FFD000;
+    
     text-align: justify;
     padding: 1em;
 }
